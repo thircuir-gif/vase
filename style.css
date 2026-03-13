@@ -1,0 +1,117 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #121418;
+  color: #e9eef5;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 100vh;
+}
+
+.controls {
+  padding: 1.2rem;
+  border-right: 1px solid #28303c;
+  overflow-y: auto;
+  background: #181c22;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.35rem 0 1.2rem;
+  color: #a7b3c6;
+  font-size: 0.9rem;
+}
+
+h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 0.95rem;
+  color: #cfe2ff;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.7rem;
+}
+
+input[type="range"],
+select,
+button,
+input[type="color"] {
+  width: 100%;
+}
+
+input[type="color"] {
+  height: 2.2rem;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+button {
+  border: none;
+  background: #3d7ef0;
+  color: #fff;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.45rem;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+
+button.secondary {
+  background: #46556d;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+}
+
+.viewport {
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hint {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  font-size: 0.8rem;
+  color: #b6bfd0;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.35rem;
+}
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 55vh;
+  }
+
+  .controls {
+    border-right: none;
+    border-bottom: 1px solid #28303c;
+  }
+}
